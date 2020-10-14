@@ -1,7 +1,12 @@
 import React from 'react';
+import '../styles/global/temp.scss';
+import tempImg from '../assets/images/temp.png';
 
 const App = () => (
-  <h1>HELLOOOO</h1>
+  <React.Fragment>
+    <h1>HELLOOOO</h1>
+    <img src={tempImg} />
+  </React.Fragment>
 );
 
 export default App;
