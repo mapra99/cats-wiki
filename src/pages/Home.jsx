@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/pages/App.scss';
+import '../styles/pages/Home.scss';
 import tempImg from '../assets/images/temp.png';
 
-const App = () => (
+const Home = () => (
   <React.Fragment>
     <h1>CatWiki</h1>
     <h2>Why should you have a cat?</h2>
@@ -11,4 +11,4 @@ const App = () => (
   </React.Fragment>
 );
 
-export default App;
+export default Home;
