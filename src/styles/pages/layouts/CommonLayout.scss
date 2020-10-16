@@ -1,0 +1,10 @@
+@import '../../global/system';
+
+.main {
+  background: red;
+  margin: 80px 18px 0;
+
+  @media (min-width: $breakpt-small) {
+    margin: 99px 96px 0;
+  }
+}
