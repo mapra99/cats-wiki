@@ -1,10 +1,18 @@
 @import '../../global/system';
 
 .main {
-  background: red;
-  margin: 80px 18px 0;
+  margin: 0 18px;
 
   @media (min-width: $breakpt-small) {
-    margin: 99px 96px 0;
+    margin: 0 96px;
+  }
+
+  .logo-wrap {
+    margin: 26px 0 30px;
+    width: 128px;
+
+    @media (max-width: $breakpt-small) {
+      margin: 23px 0;
+    }
   }
 }

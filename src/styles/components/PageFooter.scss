@@ -1,0 +1,41 @@
+@import '../global/system';
+
+.footer {
+  align-items: center;
+  background-color: $black;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 108px 40px;
+
+  @media (max-width: $breakpt-small) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 13px 29px 35px;
+  }
+
+  .logo {
+    width: 128px;
+
+    @media (max-width: $breakpt-small) {
+      width: 75px;
+      margin-bottom: 20px;
+    }
+
+    path {
+      fill: $white;
+    }
+  }
+
+  .authorship {
+    @include common-text;
+
+    color: $white;
+    font-weight: normal;
+
+    @media (max-width: $breakpt-small) {
+      font-size: 14px;
+    }
+  }
+}
