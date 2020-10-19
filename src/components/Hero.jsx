@@ -19,7 +19,7 @@ const Hero = () => (
       </picture>
     </div>
 
-    <div className="content">
+    <div className='content'>
       <Logo />
       <h2>Get to know more about your cat breed</h2>
       <CatSearchCta />

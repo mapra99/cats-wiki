@@ -8,3 +8,18 @@ $special-font-family: 'Mystery Quest', serif;
   font-weight: 500;
   line-height: 1.22;
 }
+
+@mixin main-title {
+  @include common-text;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
+div, p, span, a {
+  @include common-text;
+}
+
+h1, h2 {
+  @include main-title;
+}
