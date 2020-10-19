@@ -1,0 +1,47 @@
+@import '../global/system';
+
+.hero {
+  box-sizing: border-box;
+  height: 538px;
+  padding: 115px 108px;
+  position: relative;
+
+  .bg-wrap {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      border-top-left-radius: 42px;
+      border-top-right-radius: 42px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .content {
+    z-index: 0;
+
+    .logo {
+      margin-bottom: 11px;
+      width: 310px;
+
+      path {
+        fill: $white;
+      }
+    }
+
+    h2 {
+      font-family: $main-font-family;
+      font-weight: 500;
+      color: $white;
+      font-size: 24px;
+      line-height: 1.22;
+      max-width: 370px;
+    }
+  }
+}
