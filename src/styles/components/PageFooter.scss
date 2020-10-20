@@ -1,12 +1,10 @@
 @import '../global/system';
 
 .footer {
-  align-items: center;
+  @include flex-horizontal;
   background-color: $black;
   border-top-left-radius: 42px;
   border-top-right-radius: 42px;
-  display: flex;
-  justify-content: space-between;
   padding: 28px 108px 40px;
 
   @media (max-width: $breakpt-small) {

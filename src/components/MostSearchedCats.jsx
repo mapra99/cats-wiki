@@ -12,33 +12,33 @@ const MostSearchedCats = () => (
 
       <div className='heading-title'>
         <h1>66+ Breeds For you to discover</h1>
-        <a href='/'>SEE MORE &rarr;</a>
+        <a className='link' href='/'>SEE MORE &rarr;</a>
       </div>
     </div>
 
     <ul className='top-cats-list'>
-      <li>
+      <li className='cat-card'>
         <a href='/'>
-          <img src='https://dummyimage.com/220x220/664444/fff' alt='bengal breed' />
-          <span>Bengal</span>
+          <img src='https://dummyimage.com/220x220/664444/fff' alt='savannah breed' />
+          <span>Savannah</span>
         </a>
       </li>
-      <li>
+      <li className='cat-card'>
         <a href='/'>
-          <img src='https://dummyimage.com/220x220/664444/fff' alt='bengal breed' />
-          <span>Bengal</span>
+          <img src='https://dummyimage.com/220x220/664444/fff' alt='savannah breed' />
+          <span>Savannah</span>
         </a>
       </li>
-      <li>
+      <li className='cat-card'>
         <a href='/'>
-          <img src='https://dummyimage.com/220x220/664444/fff' alt='bengal breed' />
-          <span>Bengal</span>
+          <img src='https://dummyimage.com/220x220/664444/fff' alt='savannah breed' />
+          <span>Savannah</span>
         </a>
       </li>
-      <li>
+      <li className='cat-card'>
         <a href='/'>
-          <img src='https://dummyimage.com/220x220/664444/fff' alt='bengal breed' />
-          <span>Bengal</span>
+          <img src='https://dummyimage.com/220x220/664444/fff' alt='savannah breed' />
+          <span>Savannah</span>
         </a>
       </li>
     </ul>
