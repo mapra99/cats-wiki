@@ -4,18 +4,11 @@
   background-color: $light-grey;
   border-bottom-left-radius: 42px;
   border-bottom-right-radius: 42px;
-  box-sizing: border-box;
-  padding: 45px 108px 100px;
 
   .heading-tab {
     margin-bottom: 36px;
 
     hr {
-      background-color: $dark-brown;
-      border: 0;
-      height: 3px;
-      margin-left: 0;
-      margin-top: 8px;
       width: 60px;
     }
   }

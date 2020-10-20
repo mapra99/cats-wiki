@@ -15,9 +15,22 @@
       margin: 23px 0;
     }
   }
-  
-  .link {
+
+  .section {
+    box-sizing: border-box;
+    padding: 100px 108px;
+  }
+
+  .cta-link {
     color: rgba($very-dark-brown, 0.6);
     font-weight: 700;
+  }
+
+  .headline-decorator {
+    background-color: $dark-brown;
+    border: 0;
+    height: 3px;
+    margin-left: 0;
+    margin-top: 8px;
   }
 }

@@ -10,7 +10,7 @@ import heroImageSmall from '../assets/images/HeroImageSm.jpg';
 import '../styles/components/Hero.scss';
 
 const Hero = () => (
-  <div className='hero'>
+  <div className='section hero'>
     <div className='bg-wrap'>
       <picture>
         <source media='(min-width: 768px)' srcSet={`${heroImageMedium} 1x, ${heroImageLarge} 2x`} />
