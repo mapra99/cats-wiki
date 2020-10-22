@@ -1,0 +1,54 @@
+@import '../global/system';
+
+.cat-search-cta {
+  .input-wrap {
+    max-width: 395px;
+    position: relative;
+    width: 100%;
+
+    input {
+      @include common-text;
+      border: 0;
+      border-radius: 59px;
+      box-sizing: border-box;
+      height: 70px;
+      padding: 0 30px;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $very-dark-brown;
+      }
+    }
+
+    .search-button {
+      background-color: rgba($white, 0);
+      border: 0;
+      border-bottom-right-radius: 35px;
+      border-top-right-radius: 35px;
+      height: 70px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: background-color .25s;
+      width: 70px;
+
+      &:hover {
+        background-color: rgba($black, 0.1);
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      .icon {
+        fill: $very-dark-brown;
+        width: 25px;
+      }
+    }
+  }
+}
