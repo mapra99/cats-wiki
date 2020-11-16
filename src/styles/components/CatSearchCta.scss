@@ -1,10 +1,10 @@
 @import '../global/system';
 
 .cat-search-cta {
+  max-width: 395px;
+
   .input-wrap {
-    max-width: 395px;
     position: relative;
-    width: 100%;
 
     input {
       @include common-text;
@@ -53,6 +53,24 @@
           height: 13px;
           width: 13px;
         }
+      }
+    }
+  }
+
+  .search-results {
+    background-color: $white;
+    border-radius: 24px;
+    margin-top: 17px;
+    padding: 7px 11px;
+    max-height: 220px;
+    overflow-y: auto;
+
+    .breed-result {
+      border-radius: 12px;
+      padding: 21px 10px 21px;
+
+      &:hover {
+        background-color: rgba($light-grey, .1);
       }
     }
   }

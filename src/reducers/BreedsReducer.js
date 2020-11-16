@@ -2,7 +2,7 @@ import { SEARCH_BREED, LOADING_BREED_SEARCH, ERROR_BREED_SEARCH } from '../types
 
 const INITIAL_STATE = {
   searchResults: [],
-  searchLoading: true,
+  searchLoading: false,
   searchErrors: false,
   breeds: [],
 };

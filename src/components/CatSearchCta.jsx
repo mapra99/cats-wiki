@@ -21,8 +21,29 @@ class CatSearchCta extends React.Component {
     searchBreed(queryTerm);
   }
 
+  renderErrorMessage() {
+    const {searchErrors} = this.props;
+    return searchErrors && (
+      <div className='error-message'>
+        There was an error. Please try again later.
+      </div>
+    )
+  }
+  
+  renderResults() {
+    const {searchResults} = this.props;
+
+    return searchResults.length > 0 && (
+      <ul className='search-results'>
+        {searchResults.map(result => (
+          <li className="breed-result" key={result.id}>{result.name}</li>
+        ))}
+      </ul>
+    )
+  }
+
   render() {
-    const {searchResults, searchLoading, searchErrors} = this.props;
+    const {searchLoading} = this.props;
 
     return (
       <div className='cat-search-cta'>
@@ -34,6 +55,8 @@ class CatSearchCta extends React.Component {
               <SearchIcon className='icon search-icon' /> }
           </button>
         </div>
+        {this.renderErrorMessage()}
+        {this.renderResults()}
       </div>
     )
   }
