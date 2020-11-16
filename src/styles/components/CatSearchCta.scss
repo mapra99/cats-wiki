@@ -48,6 +48,11 @@
       .icon {
         fill: $very-dark-brown;
         width: 25px;
+
+        &.loading-icon:after {
+          height: 13px;
+          width: 13px;
+        }
       }
     }
   }

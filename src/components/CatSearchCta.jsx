@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import BreedsActions from '../actions/BreedsActions';
 
 import SearchIcon from '../assets/icons/SearchIcon';
+import SpinnerIcon from '../assets/icons/SpinnerIcon';
 
 import '../styles/components/CatSearchCta.scss';
 
@@ -21,14 +22,16 @@ class CatSearchCta extends React.Component {
   }
 
   render() {
-    const {searchResults} = this.props;
+    const {searchResults, searchLoading, searchErrors} = this.props;
 
     return (
       <div className='cat-search-cta'>
         <div className='input-wrap'>
           <input onChange={this.handleChange} type='text' placeholder='Enter your breed' />
           <button className='button search-button' type='button'>
-            <SearchIcon className='icon search-icon' />
+            {searchLoading ?
+              <SpinnerIcon className='icon loading-icon' /> :
+              <SearchIcon className='icon search-icon' /> }
           </button>
         </div>
       </div>
