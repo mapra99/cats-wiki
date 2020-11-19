@@ -11,20 +11,34 @@ import '../styles/components/CatSearchCta.scss';
 class CatSearchCta extends React.Component {
   constructor(props) {
     super(props);
+    this.handleSearchSubmit = this.handleSearchSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
+    this.state = {
+      searchTerm: "",
+    }
   }
 
   handleChange(event) {
-    const {searchBreed} = this.props;
-    const queryTerm = event.target.value;
+    const {target} = event;
+    this.setState({
+      [target.name]: target.value
+    })
+  }
 
-    searchBreed(queryTerm);
+  handleSearchSubmit(event) {
+    event.preventDefault();
+
+    const {searchBreed} = this.props;
+    const {searchTerm} = this.state;
+
+    searchBreed(searchTerm);
   }
 
   renderErrorMessage() {
     const {searchErrors} = this.props;
     return searchErrors && (
-      <div className='error-message'>
+      <div className='search-popup error-message'>
         There was an error. Please try again later.
       </div>
     )
@@ -33,30 +47,47 @@ class CatSearchCta extends React.Component {
   renderResults() {
     const {searchResults} = this.props;
 
-    return searchResults.length > 0 && (
-      <ul className='search-results'>
-        {searchResults.map(result => (
-          <li className="breed-result" key={result.id}>{result.name}</li>
-        ))}
-      </ul>
+    if (searchResults.length === 0) {
+      return (
+        <div className='search-popup error-message'>
+          No results found. Please try again with a different search term.
+        </div>
+      )
+    } else {
+      return (
+        <ul className='search-popup search-results'>
+          {searchResults.map(result => (
+            <li className="breed-result" key={result.id}>{result.name}</li>
+          ))}
+        </ul>
+      )
+    }
+  }
+
+  renderInput() {
+    const {searchTerm} = this.state;
+    const {searchLoading} = this.props;
+
+    return (
+      <form onSubmit={this.handleSearchSubmit} className='input-wrap'>
+        <input onChange={this.handleChange} type='text' placeholder='Enter your breed' name="searchTerm" value = {searchTerm} />
+        <button className='button search-button' type='submit'>
+          {searchLoading ?
+            <SpinnerIcon className='icon loading-icon' /> :
+            <SearchIcon className='icon search-icon' /> }
+        </button>
+      </form>
     )
   }
 
   render() {
-    const {searchLoading} = this.props;
+    const {searchErrors, searchFinished} = this.props;
 
     return (
       <div className='cat-search-cta'>
-        <div className='input-wrap'>
-          <input onChange={this.handleChange} type='text' placeholder='Enter your breed' />
-          <button className='button search-button' type='button'>
-            {searchLoading ?
-              <SpinnerIcon className='icon loading-icon' /> :
-              <SearchIcon className='icon search-icon' /> }
-          </button>
-        </div>
-        {this.renderErrorMessage()}
-        {this.renderResults()}
+        {this.renderInput()}
+        {searchErrors && this.renderErrorMessage()}
+        {searchFinished && this.renderResults()}
       </div>
     )
   }
