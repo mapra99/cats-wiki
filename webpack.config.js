@@ -60,8 +60,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    new DotenvPlugin({
-      safe: true,
-    })
+    new DotenvPlugin()
   ],
 };
