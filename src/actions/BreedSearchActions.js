@@ -2,7 +2,7 @@ import axios from 'axios';
 import {SEARCH_BREED, LOADING_BREED_SEARCH, ERROR_BREED_SEARCH} from '../types/BreedsTypes';
 
 const {API_URL} = process.env;
-const BreedActions = {
+const BreedSearchActions = {
   searchBreed: (term) => (dispatch) => {
     if (term.length <= 1) {
       return dispatch({
@@ -27,4 +27,4 @@ const BreedActions = {
   },
 };
 
-export default BreedActions;
+export default BreedSearchActions;

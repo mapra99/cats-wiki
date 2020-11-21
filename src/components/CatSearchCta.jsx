@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
-import BreedsActions from '../actions/BreedsActions';
+import BreedSearchActions from '../actions/BreedSearchActions';
 
 import SearchIcon from '../assets/icons/SearchIcon';
 import SpinnerIcon from '../assets/icons/SpinnerIcon';
@@ -94,7 +94,7 @@ class CatSearchCta extends React.Component {
 }
 
 const mapStateToProps = (reducers) => {
-  return reducers.BreedsReducer;
+  return reducers.BreedSearchReducer;
 }
 
-export default connect(mapStateToProps, BreedsActions)(CatSearchCta);
+export default connect(mapStateToProps, BreedSearchActions)(CatSearchCta);

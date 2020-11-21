@@ -4,11 +4,10 @@ const INITIAL_STATE = {
   searchResults: [],
   searchLoading: false,
   searchErrors: false,
-  searchFinished: false,
-  breeds: [],
+  searchFinished: false
 };
 
-const BreedsReducer = (state = INITIAL_STATE, action) => {
+const BreedSearchReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SEARCH_BREED:
       return { ...state, searchResults: action.payload, searchLoading: false, searchErrors: false, searchFinished: true };
@@ -21,4 +20,4 @@ const BreedsReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default BreedsReducer;
+export default BreedSearchReducer;
