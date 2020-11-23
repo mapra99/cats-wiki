@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 const BreedsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case FEED_BREED_DATA:
-      return { ...state, breeds: {...breeds, ...action.payload}};
+      return { ...state, breeds: {...state.breeds, ...action.payload}};
     default:
       return state;
   }
