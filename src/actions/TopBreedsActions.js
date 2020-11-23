@@ -4,7 +4,7 @@ import { FETCH_TOP_BREEDS, LOADING_TOP_BREEDS, ERROR_TOP_BREEDS, FEED_BREED_DATA
 
 const {API_URL} = process.env;
 const TopBreedsActions = {
-  fetchTopBreeds: (limit = 10) => (dispatch, getState) => {
+  fetchTopBreeds: (limit = 10) => (dispatch) => {
     dispatch({ type: LOADING_TOP_BREEDS })
 
     axios.get(`${API_URL}/breeds/top-searches?limit=${limit}`)
