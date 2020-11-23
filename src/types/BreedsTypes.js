@@ -6,4 +6,6 @@ export const FETCH_TOP_BREEDS = 'fetch_top_breeds';
 export const LOADING_TOP_BREEDS = 'loading_top_breeds';
 export const ERROR_TOP_BREEDS = 'error_top_breeds';
 
-export default SEARCH_BREED;
+export const FEED_BREED_DATA = 'feeed_breed_data';
+
+export default "";
