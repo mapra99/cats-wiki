@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'underscore';
 
 import {connect} from 'react-redux';
 import TopBreedsActions from '../actions/TopBreedsActions';
@@ -17,20 +18,21 @@ class MostSearchedCats extends React.Component{
 
   componentDidMount() {
     const {fetchTopBreeds} = this.props;
-    fetchTopBreeds(4);
+    fetchTopBreeds();
   }
 
   renderBreedCards() {
-    const {topResults} = this.props;
+    const {topResults, breeds} = this.props;
+    const breedsSample = _.sample(topResults, 4);
 
     return (
       <ul className='top-cats-list'>
-        {topResults.map(breed => (
+        {breedsSample.map(breed_id => (
           <CatCard
-            key={breed.id}
-            catName={breed.name}
-            catImage={breed.images[0]}
-            altAttribute={`Cute snapshot of a ${breed.name} cat`}/>
+            key={breed_id}
+            catName={breeds[breed_id].name}
+            catImage={breeds[breed_id].images[0]}
+            altAttribute={`Cute snapshot of a ${breeds[breed_id].name} cat`}/>
         ))}
       </ul>
     )
@@ -68,7 +70,7 @@ class MostSearchedCats extends React.Component{
 }
 
 const mapStateToProps = (reducers) => {
-  return reducers.TopBreedsReducer;
+  return {...reducers.TopBreedsReducer, ...reducers.BreedsReducer};
 }
 
 export default connect(mapStateToProps, TopBreedsActions)(MostSearchedCats);

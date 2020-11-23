@@ -45,7 +45,7 @@ class CatSearchCta extends React.Component {
   }
   
   renderResults() {
-    const {searchResults} = this.props;
+    const {searchResults, breeds} = this.props;
 
     if (searchResults.length === 0) {
       return (
@@ -56,8 +56,8 @@ class CatSearchCta extends React.Component {
     } else {
       return (
         <ul className='search-popup search-results'>
-          {searchResults.map(result => (
-            <li className="breed-result" key={result.id}>{result.name}</li>
+          {searchResults.map(result_id => (
+            <li className="breed-result" key={result_id}>{breeds[result_id].name}</li>
           ))}
         </ul>
       )
@@ -94,7 +94,7 @@ class CatSearchCta extends React.Component {
 }
 
 const mapStateToProps = (reducers) => {
-  return reducers.BreedSearchReducer;
+  return {...reducers.BreedSearchReducer, ...reducers.BreedsReducer};
 }
 
 export default connect(mapStateToProps, BreedSearchActions)(CatSearchCta);
