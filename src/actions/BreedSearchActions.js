@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {SEARCH_BREED, LOADING_BREED_SEARCH, ERROR_BREED_SEARCH} from '../types/BreedsTypes';
 
+const {API_URL} = process.env;
 const BreedSearchActions = {
   searchBreed: (term) => (dispatch) => {
     if (term.length <= 1) {
@@ -12,7 +13,7 @@ const BreedSearchActions = {
 
     dispatch({ type: LOADING_BREED_SEARCH })
 
-    axios.get(`${process.env.API_URL}/breeds/search?term=${term}`)
+    axios.get(`${API_URL}/breeds/search?term=${term}`)
       .then(response => {
         dispatch({
           type: SEARCH_BREED,
