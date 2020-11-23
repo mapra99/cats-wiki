@@ -61,7 +61,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    new webpack.EnvironmentPlugin(['API_URL']),
     new DotenvPlugin(),
+    new webpack.EnvironmentPlugin(['API_URL']),
   ],
 };
