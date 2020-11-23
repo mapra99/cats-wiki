@@ -1,0 +1,46 @@
+@import '../global/system';
+
+.cat-card {
+  flex: 1 1;
+  height: 100%;
+  margin: 0 25px;
+  transition: flex .25s;
+
+  &:first-child {
+    padding-left: 0;
+    position: relative;
+
+    &:before {
+      background-color: $light-brown;
+      border-bottom-left-radius: 14px;
+      border-top-left-radius: 14px;
+      content: '';
+      display: block;
+      height: 66%;
+      left: -14px;
+      position: absolute;
+      top: 8%;
+      width: 14px;
+    }
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  &:hover {
+    flex: 1.2 1.2;
+  }
+
+  img {
+    border-radius: 24px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  span {
+    font-weight: 600;
+  }
+}
