@@ -4,7 +4,9 @@ import '../styles/components/PageFooter.scss';
 
 const PageFooter = () => (
   <div className='footer'>
-    <Logo />
+    <a href='/'>
+      <Logo />
+    </a>
     <div className='authorship'>
       &copy; Miguel Prada - devchallenge.io 2020
     </div>

@@ -6,7 +6,9 @@ import PageFooter from '../../components/PageFooter';
 const CommonLayout = ({ children }) => (
   <div className='main'>
     <div className='logo-wrap'>
-      <Logo />
+      <a href='/'>
+        <Logo />
+      </a>
     </div>
     { children }
     <div className='footer-wrap'>
