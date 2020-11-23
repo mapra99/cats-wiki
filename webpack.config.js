@@ -1,7 +1,8 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const webpack = require('webpack');
+const DotenvPlugin = require('dotenv-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -60,8 +61,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
     }),
-    new webpack.EnvironmentPlugin({
-      API_URL: 'http://localhost:3000'
-    })
+    new DotenvPlugin(),
+    new webpack.EnvironmentPlugin(['API_URL'])
   ],
 };
