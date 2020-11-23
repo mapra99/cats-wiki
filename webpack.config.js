@@ -62,8 +62,6 @@ module.exports = {
       filename: 'assets/[name].css',
     }),
     new webpack.EnvironmentPlugin(['API_URL']),
-    new DotenvPlugin({
-      safe: true
-    }),
+    new DotenvPlugin(),
   ],
 };
