@@ -1,0 +1,61 @@
+@import '../global/system';
+
+.home-banner {
+  @include flex-horizontal;
+
+  .col-content {
+    flex: 1 1;
+    margin-right: 23px;
+
+    .heading {
+      hr {
+        margin-bottom: 17px;
+        width: 67px;
+      }
+
+      h1 {
+        margin-bottom: 44px;
+      }
+    }
+
+    .description {
+      p {
+        margin-bottom: 66px;
+      }
+    }
+  }
+
+  .col-images {
+    @include flex-horizontal;
+    align-items: flex-start;
+    flex: 1 1;
+    margin-left: 23px;
+
+    .col-1 {
+      flex: 1.1 1.1;
+      margin-right: 5%;
+      text-align: right;
+    }
+
+    .col-2{
+      flex: 1 1;
+    }
+
+    .kitty-img {
+      border-radius: 34px;
+
+      &.kitty-1 {
+        margin-bottom: 5%;
+        width: 100%;
+      }
+
+      &.kitty-2 {
+        width: 80%;
+      }
+
+      &.kitty-3 {
+        width: 100%;
+      }
+    }
+  }
+}

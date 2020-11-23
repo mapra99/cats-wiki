@@ -1,0 +1,26 @@
+$main-font-family: 'Montserrat', sans-serif;
+$special-font-family: 'Mystery Quest', serif;
+
+@mixin common-text {
+  color: $very-dark-brown;
+  font-family: $main-font-family;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+@mixin main-title {
+  @include common-text;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
+div, p, span, a {
+  @include common-text;
+  text-decoration: none;
+}
+
+h1, h2 {
+  @include main-title;
+}
