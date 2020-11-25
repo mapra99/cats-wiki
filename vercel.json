@@ -1,5 +1,5 @@
 {
   "redirects": [
-    { "source": "/top-breeds", "destination": "/index.html" }
+    { "source": "/top-breeds", "destination": "/top-breeds" }
   ]
 }
