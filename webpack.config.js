@@ -64,4 +64,10 @@ module.exports = {
     new DotenvPlugin(),
     new webpack.EnvironmentPlugin(['API_URL']),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 8080,
+    historyApiFallback: true
+  }
 };
