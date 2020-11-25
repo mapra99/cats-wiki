@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Logo from './shared/Logo';
-import CatSearchCta from './shared/CatSearchCta';
+import Logo from '../shared/Logo';
+import CatSearchCta from '../shared/CatSearchCta';
 
-import heroImageLarge from '../assets/images/HeroImageLg.jpg';
-import heroImageMedium from '../assets/images/HeroImageMd.jpg';
-import heroImageSmall from '../assets/images/HeroImageSm.jpg';
+import heroImageLarge from '../../assets/images/HeroImageLg.jpg';
+import heroImageMedium from '../../assets/images/HeroImageMd.jpg';
+import heroImageSmall from '../../assets/images/HeroImageSm.jpg';
 
-import '../styles/components/Hero.scss';
+import '../../styles/components/home/Hero.scss';
 
 const Hero = () => (
   <div className='section hero'>
