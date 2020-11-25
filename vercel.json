@@ -1,5 +1,5 @@
 {
   "routes": [
-    { "src": "/top-breeds", "dest": "/top-breeds" }
+    { "src": "/top-breeds", "continue": true }
   ]
 }
