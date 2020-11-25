@@ -1,5 +1,6 @@
 {
   "rewrites": [
+    { "source": "/error", "continue": false},  // temporal, until we have a working error screen
     { "source": "/:foo*", "destination": "/index.html" }
   ]
 }
