@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import TopBreedsActions from '../../actions/TopBreedsActions';
 
+import BreedDescription from './BreedDescription';
+
 class BreedsList extends React.Component {
   constructor(props) {
     super(props);
@@ -16,13 +18,18 @@ class BreedsList extends React.Component {
   }
 
   renderList() {
-    const {topResults} = this.props;
-
+    const {topResults, breeds} = this.props;
     return (
       <div>
-        {topResults.map(topBreed => (
-          <p>{topBreed}</p>
-        ))}
+        {topResults.map(breedId => {
+          const {name, description, images} = breeds[breedId];
+          return (
+          <BreedDescription
+            key={breedId}
+            breedName={name}
+            breedDescription={description}
+            breedImage={images[0]} />
+        )})}
       </div>
     )
   }
