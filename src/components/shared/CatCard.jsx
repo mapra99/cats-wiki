@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/components/CatCard.scss';
+import '../../styles/components/shared/CatCard.scss';
 
 const CatCard = ({catName, catImage, altAttribute, className}) => (
   <li className={`cat-card ${className}`}>

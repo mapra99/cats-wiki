@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
-import '../styles/components/PageFooter.scss';
+import '../../styles/components/shared/PageFooter.scss';
+
 
 const PageFooter = () => (
   <div className='footer'>

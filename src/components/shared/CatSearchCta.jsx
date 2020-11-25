@@ -1,12 +1,12 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
-import BreedSearchActions from '../actions/BreedSearchActions';
+import BreedSearchActions from '../../actions/BreedSearchActions';
 
-import SearchIcon from '../assets/icons/SearchIcon';
-import SpinnerIcon from '../assets/icons/SpinnerIcon';
+import SearchIcon from '../../assets/icons/SearchIcon';
+import SpinnerIcon from '../../assets/icons/SpinnerIcon';
 
-import '../styles/components/CatSearchCta.scss';
+import '../../styles/components/shared/CatSearchCta.scss';
 
 class CatSearchCta extends React.Component {
   constructor(props) {

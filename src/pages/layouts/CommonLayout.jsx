@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/pages/layouts/CommonLayout.scss';
-import Logo from '../../components/Logo';
-import PageFooter from '../../components/PageFooter';
+import Logo from '../../components/shared/Logo';
+import PageFooter from '../../components/shared/PageFooter';
 
 const CommonLayout = ({ children }) => (
   <div className='main'>
