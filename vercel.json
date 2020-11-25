@@ -1,5 +1,5 @@
 {
   "routes": [
-    { "src": ".*", "dest": "/index.html" }
+    { "src": "/top-breeds", "dest": "/index.html" }
   ]
 }
