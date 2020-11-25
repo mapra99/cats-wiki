@@ -5,6 +5,7 @@ import TopBreedsActions from '../../actions/TopBreedsActions';
 
 import BreedDescription from './BreedDescription';
 
+import '../../styles/components/top_breeds/BreedsList.scss';
 class BreedsList extends React.Component {
   constructor(props) {
     super(props);
@@ -20,13 +21,13 @@ class BreedsList extends React.Component {
   renderList() {
     const {topResults, breeds} = this.props;
     return (
-      <div>
-        {topResults.map(breedId => {
+      <div className= "breed-list-wrap">
+        {topResults.map((breedId, index) => {
           const {name, description, images} = breeds[breedId];
           return (
           <BreedDescription
             key={breedId}
-            breedName={name}
+            breedName={`${index+1}. ${name}`}
             breedDescription={description}
             breedImage={images[0]} />
         )})}

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../styles/components/top_breeds/BreedDescription.scss';
+
 const BreedDescription = ({breedName, breedDescription, breedImage}) => (
   <div className="breed-description">
     <div className="img-wrap">
