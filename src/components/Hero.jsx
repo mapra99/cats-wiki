@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Logo from './shared/Logo';
-import CatSearchCta from './CatSearchCta';
+import CatSearchCta from './shared/CatSearchCta';
 
 import heroImageLarge from '../assets/images/HeroImageLg.jpg';
 import heroImageMedium from '../assets/images/HeroImageMd.jpg';

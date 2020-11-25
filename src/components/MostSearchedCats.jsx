@@ -4,7 +4,7 @@ import _ from 'underscore';
 import {connect} from 'react-redux';
 import TopBreedsActions from '../actions/TopBreedsActions';
 
-import CatCard from './CatCard';
+import CatCard from './shared/CatCard';
 
 import '../styles/components/MostSearchedCats.scss';
 
