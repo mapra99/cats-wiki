@@ -4,8 +4,6 @@ import Hero from '../components/home/Hero';
 import MostSearchedCats from '../components/home/MostSearchedCats';
 import HomeBanner from '../components/home/HomeBanner';
 
-import '../styles/pages/Home.scss';
-
 const Home = () => (
   <>
     <Hero />
