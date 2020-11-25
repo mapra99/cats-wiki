@@ -12,9 +12,9 @@ const TopBreedsReducer = (state = INITIAL_STATE, action) => {
     case FETCH_TOP_BREEDS:
       return { ...state, topResults: action.payload, loading: false, errors: false, finished: true };
     case LOADING_TOP_BREEDS:
-      return { ...state, topResults: true, finished: false };
+      return { ...state, loading: true, finished: false };
     case ERROR_TOP_BREEDS:
-      return { ...state, topResults: false, errors: true, finished: false };
+      return { ...state, loading: false, errors: true, finished: false };
     default:
       return state;
   }
