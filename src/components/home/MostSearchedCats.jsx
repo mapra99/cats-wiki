@@ -18,8 +18,10 @@ class MostSearchedCats extends React.Component{
   }
 
   componentDidMount() {
-    const {fetchTopBreeds} = this.props;
-    fetchTopBreeds();
+    const {fetchTopBreeds, topResults} = this.props;
+    if (topResults.length < 4) {
+      fetchTopBreeds(4);
+    }
   }
 
   renderBreedCards() {

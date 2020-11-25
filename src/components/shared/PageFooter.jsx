@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Logo from './Logo';
 import '../../styles/components/shared/PageFooter.scss';
 
 
 const PageFooter = () => (
   <div className='footer'>
-    <a href='/'>
+    <Link to='/'>
       <Logo />
-    </a>
+    </Link>
     <div className='authorship'>
       &copy; Miguel Prada - devchallenge.io 2020
     </div>
