@@ -1,0 +1,5 @@
+{
+  "redirects": [
+    { "source": "/top-breeds", "destination": "/index.html" }
+  ]
+}
