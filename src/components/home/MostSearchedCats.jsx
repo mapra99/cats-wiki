@@ -3,11 +3,11 @@ import _ from 'underscore';
 
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
-import TopBreedsActions from '../actions/TopBreedsActions';
+import TopBreedsActions from '../../actions/TopBreedsActions';
 
-import CatCard from './CatCard';
+import CatCard from '../shared/CatCard';
 
-import '../styles/components/MostSearchedCats.scss';
+import '../../styles/components/home/MostSearchedCats.scss';
 
 class MostSearchedCats extends React.Component{
   constructor(props) {

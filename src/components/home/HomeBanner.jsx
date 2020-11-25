@@ -1,10 +1,10 @@
 import React from 'react';
 
-import '../styles/components/HomeBanner.scss';
+import '../../styles/components/home/HomeBanner.scss';
 
-import kitty1 from '../assets/images/kitty1.jpg';
-import kitty2 from '../assets/images/kitty2.jpg';
-import kitty3 from '../assets/images/kitty3.jpg';
+import kitty1 from '../../assets/images/kitty1.jpg';
+import kitty2 from '../../assets/images/kitty2.jpg';
+import kitty3 from '../../assets/images/kitty3.jpg';
 
 const HomeBanner = () => (
   <div className='section home-banner'>

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Hero from '../components/Hero';
-import MostSearchedCats from '../components/MostSearchedCats';
-import HomeBanner from '../components/HomeBanner';
+import Hero from '../components/home/Hero';
+import MostSearchedCats from '../components/home/MostSearchedCats';
+import HomeBanner from '../components/home/HomeBanner';
 
 import '../styles/pages/Home.scss';
 
