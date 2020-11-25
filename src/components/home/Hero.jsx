@@ -2,6 +2,7 @@ import React from 'react';
 
 import Logo from '../shared/Logo';
 import CatSearchCta from '../shared/CatSearchCta';
+import ResponsiveImage from '../shared/ResponsiveImage';
 
 import heroImageLarge from '../../assets/images/HeroImageLg.jpg';
 import heroImageMedium from '../../assets/images/HeroImageMd.jpg';
@@ -12,11 +13,12 @@ import '../../styles/components/home/Hero.scss';
 const Hero = () => (
   <div className='section hero'>
     <div className='bg-wrap'>
-      <picture>
-        <source media='(min-width: 768px)' srcSet={`${heroImageMedium} 1x, ${heroImageLarge} 2x`} />
-        <source media='(max-width: 767px)' srcSet={`${heroImageSmall} 1x, ${heroImageMedium} 2x`} />
-        <img src={heroImageMedium} alt='a cute kitty looking at the horizon' />
-      </picture>
+      <ResponsiveImage
+        breakpointSize="768px"
+        imageLarge={heroImageLarge}
+        imageMedium={heroImageMedium}
+        imageSmall={heroImageSmall}
+        altAttribute='a cute kitty looking at the horizon' />
     </div>
 
     <div className='content'>

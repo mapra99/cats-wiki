@@ -12,7 +12,6 @@ class MostSearchedCats extends React.Component{
   constructor(props) {
     super(props);
 
-    this.renderTopSearches = this.renderTopSearches.bind(this);
     this.renderBreedCards = this.renderBreedCards.bind(this);
   }
 
@@ -38,7 +37,9 @@ class MostSearchedCats extends React.Component{
     )
   }
 
-  renderTopSearches() {
+  render() {
+    const {finished} = this.props;
+
     return (
       <div className='section top-searches'>
         <div className='heading'>
@@ -56,16 +57,6 @@ class MostSearchedCats extends React.Component{
         { this.renderBreedCards() }
       </div>
     )
-  }
-
-  render() {
-    const {finished} = this.props;
-
-    if (finished) {
-      return this.renderTopSearches();
-    } else {
-      return null
-    }
   }
 }
 
