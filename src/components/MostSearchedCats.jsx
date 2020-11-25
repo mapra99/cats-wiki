@@ -2,6 +2,7 @@ import React from 'react';
 import _ from 'underscore';
 
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import TopBreedsActions from '../actions/TopBreedsActions';
 
 import CatCard from './CatCard';
@@ -12,7 +13,7 @@ class MostSearchedCats extends React.Component{
   constructor(props) {
     super(props);
 
-    this.renderTopSearches = this.renderTopSearches.bind(this);
+    this.renderHeading = this.renderHeading.bind(this);
     this.renderBreedCards = this.renderBreedCards.bind(this);
   }
 
@@ -38,22 +39,18 @@ class MostSearchedCats extends React.Component{
     )
   }
 
-  renderTopSearches() {
+  renderHeading() {
     return (
-      <div className='section top-searches'>
-        <div className='heading'>
-          <div className='heading-tab'>
-            <span>Most Searched Breeds</span>
-            <hr className='headline-decorator' />
-          </div>
-
-          <div className='heading-title'>
-            <h1>66+ Breeds For you to discover</h1>
-            <a className='cta-link' href='/'>SEE MORE &rarr;</a>
-          </div>
+      <div className='heading'>
+        <div className='heading-tab'>
+          <span>Most Searched Breeds</span>
+          <hr className='headline-decorator' />
         </div>
 
-        { this.renderBreedCards() }
+        <div className='heading-title'>
+          <h1>66+ Breeds For you to discover</h1>
+          <Link className='cta-link' to='/top-breeds'>SEE MORE &rarr;</Link>
+        </div>
       </div>
     )
   }
@@ -61,11 +58,12 @@ class MostSearchedCats extends React.Component{
   render() {
     const {finished} = this.props;
 
-    if (finished) {
-      return this.renderTopSearches();
-    } else {
-      return null
-    }
+    return (
+      <div className='section top-searches'>
+        { this.renderHeading() }
+        { finished && this.renderBreedCards() }
+      </div>
+    )
   }
 }
 
