@@ -2,6 +2,10 @@
 
 .main {
   margin: 0 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (min-width: $breakpt-small) {
     margin: 0 96px;

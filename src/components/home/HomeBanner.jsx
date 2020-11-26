@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import '../../styles/components/home/HomeBanner.scss';
 
@@ -19,7 +20,7 @@ const HomeBanner = () => (
           Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves
         </p>
 
-        <a href='/' className='cta-link'>READ MORE &rarr;</a>
+        <Link to='/top-breeds' className='cta-link'>SEE THE TOP SEARCHED BREEDS &rarr;</Link>
       </div>
     </div>
 

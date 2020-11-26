@@ -1,0 +1,45 @@
+@import '../../../global/system';
+
+.top-cats-list {
+  @include flex-horizontal;
+  height: 220px;
+
+  .cat-link {
+    flex: 1 1;
+    height: 100%;
+    margin: 0 25px;
+    transition: flex .25s;
+  
+    &:first-child {
+      padding-left: 0;
+      position: relative;
+  
+      &:before {
+        background-color: $light-brown;
+        border-bottom-left-radius: 14px;
+        border-top-left-radius: 14px;
+        content: '';
+        display: block;
+        height: 66%;
+        left: -14px;
+        position: absolute;
+        top: 8%;
+        width: 14px;
+      }
+    }
+  
+    &:hover {
+      flex: 1.2 1.2;
+    }
+
+    .cat-card {
+      margin: 0;
+    
+      &:first-child {    
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}

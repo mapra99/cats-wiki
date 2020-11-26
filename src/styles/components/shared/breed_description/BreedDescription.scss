@@ -1,4 +1,4 @@
-@import "../../global/system.scss";
+@import "../../../global/system.scss";
 
 .breed-description {
   display: flex;
@@ -21,11 +21,5 @@
 
   .text-wrap {
     flex: 6 6;
-
-    .breed-name {
-      font-size: 36px;
-      font-weight: 600;
-      margin-bottom: 24px;
-    }
   }
 }

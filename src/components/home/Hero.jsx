@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Logo from '../shared/Logo';
-import CatSearchCta from '../shared/CatSearchCta';
+import CatSearchCtaContainer from '../shared/cat_search_cta/CatSearchCtaContainer';
 import ResponsiveImage from '../shared/ResponsiveImage';
 
 import heroImageLarge from '../../assets/images/HeroImageLg.jpg';
@@ -24,7 +24,7 @@ const Hero = () => (
     <div className='content'>
       <Logo />
       <h2>Get to know more about your cat breed</h2>
-      <CatSearchCta />
+      <CatSearchCtaContainer />
     </div>
   </div>
 );

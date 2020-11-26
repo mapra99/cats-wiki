@@ -2,9 +2,11 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router';
+import {Link} from 'react-router-dom';
+
 import TopBreedsActions from '../../actions/TopBreedsActions';
 
-import BreedDescription from './BreedDescription';
+import BreedDescriptionContainer from '../shared/breed_description/BreedDescriptionContainer';
 import SpinnerIcon from '../../assets/icons/SpinnerIcon';
 
 import '../../styles/components/top_breeds/BreedsList.scss';
@@ -17,17 +19,16 @@ class BreedsList extends React.Component {
   }
 
   renderList() {
-    const {topResults, breeds} = this.props;
+    const {topResults} = this.props;
     return (
       <div className= "breed-list-wrap">
-        {topResults.map((breedId, index) => {
-          const {name, description, images} = breeds[breedId];
+        {topResults.map((breedId) => {
           return (
-          <BreedDescription
-            key={breedId}
-            breedName={`${index+1}. ${name}`}
-            breedDescription={description}
-            breedImage={images[0]} />
+          <Link to={`/breeds/${breedId}`} className="breed-link" key={breedId} >
+            <BreedDescriptionContainer
+              breedId={breedId}
+              shortMode={true} />
+          </Link>
         )})}
       </div>
     )
