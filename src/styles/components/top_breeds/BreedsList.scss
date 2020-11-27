@@ -9,17 +9,19 @@
     margin-bottom: 52px;
   }
 
-  .loading-icon {
-    width: 100%;
-    height: calc(100vh - 421px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:after {
-      width: 100px;
-      height: 100px;
-      border-width: 15px;
+  .breed-link {
+    &:hover {
+      .breed-description {
+        background-color: rgba($light-brown, .1);
+      }
     }
+
+    .breed-description {
+      border-radius: 24px;
+    }
+  }
+
+  .cat-card:first-child:before {
+    content: none;
   }
 }

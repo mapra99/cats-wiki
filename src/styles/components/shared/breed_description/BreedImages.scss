@@ -1,0 +1,27 @@
+@import "../../../global/system.scss";
+
+.breed-images {
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .images-collection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 177px;
+  
+    .cat-card {
+      box-sizing: border-box;
+      padding: 0 46px 55px 0;
+      margin-left: 0;
+      min-width: 20%;
+  
+      &:first-child:before {
+        content: none;
+      }
+    }
+  }
+}

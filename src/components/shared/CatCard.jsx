@@ -3,14 +3,14 @@ import React from 'react';
 import '../../styles/components/shared/CatCard.scss';
 
 const CatCard = ({catName, catImage, altAttribute, className}) => (
-  <li className={`cat-card ${className}`}>
-    <a href='/'>
-      <img src={catImage} alt={altAttribute || ''} />
+  <div className={`cat-card ${className}`}>
+    <img src={catImage} alt={altAttribute || ''} />
+    {catName && (
       <span>
         {catName}
       </span>
-    </a>
-  </li>
+    )}
+  </div>
 )
 
 export default CatCard;

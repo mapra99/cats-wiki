@@ -77,3 +77,5 @@ dist/
 
 # Design Docs
 docs/design/
+
+dump.rdb

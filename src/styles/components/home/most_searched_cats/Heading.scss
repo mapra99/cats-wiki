@@ -1,34 +1,25 @@
-@import '../../global/system';
+@import '../../../global/system';
 
-.top-searches {
-  background-color: $light-grey;
-  border-bottom-left-radius: 42px;
-  border-bottom-right-radius: 42px;
-
+.heading {
   .heading-tab {
     margin-bottom: 36px;
-
+  
     hr {
       width: 60px;
     }
   }
-
+  
   .heading-title {
     @include flex-horizontal;
     align-items: flex-end;
     margin-bottom: 46px;
-
+  
     h1 {
       max-width: 540px;
     }
-
+  
     .link {
       margin-bottom: 12px;
     }
-  }
-
-  .top-cats-list {
-    @include flex-horizontal;
-    height: 220px;
   }
 }
