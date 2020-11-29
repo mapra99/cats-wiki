@@ -24,6 +24,10 @@
 .section {
   box-sizing: border-box;
   padding: 100px 108px;
+
+  @media (max-width: $breakpt-medium) {
+    padding: 20px 30px;
+  }
 }
 
 .cta-link {
