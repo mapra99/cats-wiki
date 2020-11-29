@@ -14,7 +14,6 @@ const App = () => (
         <Route exact path="/top-breeds" component={TopBreeds} />
         <Route exact path="/breeds/:breedId" component={BreedDetails} />
       </CommonLayout>
-
   </BrowserRouter>
 );
 
