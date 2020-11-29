@@ -1,0 +1,4 @@
+{
+  "/breeds/top-searches?*": "/breeds",
+  "/breeds/search?term=:q": "/breeds?q=:q"
+}

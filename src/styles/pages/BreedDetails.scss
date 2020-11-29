@@ -1,0 +1,50 @@
+@import '../global/system';
+
+.breed-details {
+  .breed-description {
+    align-items: flex-start;
+
+    .cat-card {
+      flex: 1.5 1.5;
+      margin: 0 30px;
+
+      @media (max-width: $breakpt-extra-large) {
+        margin: 0 20px;
+      }
+
+      @media (max-width: $breakpt-medium) {
+        margin: 0 0 20px 10px;
+      }
+
+      &:hover {
+        flex: 3 3;
+      }
+    }
+
+    .text-wrap {
+      margin: 0 30px;
+
+      @media (max-width: $breakpt-extra-large) {
+        margin: 0 20px;
+      }
+
+      @media (max-width: $breakpt-medium) {
+        margin: 0 0 10px;
+      }
+    }
+  }
+
+  .loading-icon {
+    width: 100%;
+    height: calc(100vh - 421px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+      width: 100px;
+      height: 100px;
+      border-width: 15px;
+    }
+  }
+}

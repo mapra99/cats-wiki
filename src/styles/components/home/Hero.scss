@@ -1,0 +1,59 @@
+@import '../../global/system';
+
+.hero {
+  height: 538px;
+  position: relative;
+
+  @media (max-width: $breakpt-medium) {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .bg-wrap {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      border-top-left-radius: 42px;
+      border-top-right-radius: 42px;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .content {
+    z-index: 0;
+
+    .logo {
+      margin-bottom: 11px;
+      width: 310px;
+
+      @media (max-width: $breakpt-medium) {
+        width: 200px;
+      }
+
+      path {
+        fill: $white;
+      }
+    }
+
+    h2 {
+      color: $white;
+      font-family: $main-font-family;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.22;
+      margin-bottom: 50px;
+      max-width: 370px;
+
+      @media (max-width: $breakpt-medium) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

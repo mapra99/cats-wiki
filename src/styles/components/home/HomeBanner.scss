@@ -1,0 +1,88 @@
+@import '../../global/system';
+
+.home-banner {
+  @include flex-horizontal;
+
+  @media (max-width: $breakpt-medium) {
+    flex-direction: column;
+    padding: 40px 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .col-content {
+    flex: 1 1;
+    margin-right: 23px;
+
+    @media (max-width: $breakpt-medium) {
+      margin-right: 0;
+    }
+
+    .heading {
+      hr {
+        margin-bottom: 17px;
+        width: 67px;
+      }
+
+      h1 {
+        margin-bottom: 44px;
+
+        @media (max-width: $breakpt-medium) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .description {
+      p {
+        margin-bottom: 66px;
+
+        @media (max-width: $breakpt-medium) {
+          margin-bottom: 30px;
+        }
+      }
+
+      .cta-link {
+        @media (max-width: $breakpt-medium) {
+          display: block;
+          margin-bottom: 60px;
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .col-images {
+    @include flex-horizontal;
+    align-items: flex-start;
+    flex: 1 1;
+    margin-left: 23px;
+
+    .col-1 {
+      flex: 1.1 1.1;
+      margin-right: 5%;
+      text-align: right;
+    }
+
+    .col-2{
+      flex: 1 1;
+    }
+
+    .kitty-img {
+      border-radius: 34px;
+
+      &.kitty-1 {
+        margin-bottom: 5%;
+        width: 100%;
+      }
+
+      &.kitty-2 {
+        width: 80%;
+      }
+
+      &.kitty-3 {
+        width: 100%;
+      }
+    }
+  }
+}

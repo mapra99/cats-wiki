@@ -1,0 +1,42 @@
+@import "../../../global/system.scss";
+
+.quantitative {
+  display: flex;
+  max-width: 700px;
+
+  @media (max-width: $breakpt-large) {
+    flex-direction: column;
+  }
+
+  .name {
+    display: inline-block;
+    width: 180px;
+    margin-right: 30px;
+  }
+
+  .value {
+    display: flex;
+    width: calc(100% - 210px);
+
+    @media (max-width: $breakpt-large) {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .score {
+      display: inline-block;
+      flex: 1 1;
+      margin-right: 5%;
+      height: 12px;
+      border-radius: 6px;
+
+      &.active {
+        background-color: $brown;
+      }
+
+      &.inactive {
+        background-color: $very-light-grey;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../../global/system';
+
+.top-cats-list {
+  @include flex-horizontal;
+  height: 220px;
+
+  @media (max-width: $breakpt-extra-large) {
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  .cat-link {
+    box-sizing: border-box;
+    flex: 1 1;
+    height: 100%;
+    padding: 0 25px;
+    margin: 0;
+    transition: flex .25s;
+
+    @media (max-width: $breakpt-extra-large) {
+      min-width: 50%;
+      padding: 0 10px;
+      margin-bottom: 35px;
+    }
+
+    @media (max-width: $breakpt-medium) {
+      padding: 0 5px;
+    }
+
+    @media (max-width: $breakpt-small) {
+      min-width: 100%;
+    }
+  
+    &:first-child {
+      padding-left: 0;
+      position: relative;
+
+      @media (min-width: $breakpt-large) {
+        &:before {
+          background-color: $light-brown;
+          border-bottom-left-radius: 14px;
+          border-top-left-radius: 14px;
+          content: '';
+          display: block;
+          height: 66%;
+          left: -14px;
+          position: absolute;
+          top: 8%;
+          width: 14px;
+        }
+      }
+    }
+  
+    &:hover {
+      flex: 1.2 1.2;
+    }
+
+    .cat-card {
+      margin: 0;
+
+      width: 100%;
+    
+      &:first-child {    
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+}

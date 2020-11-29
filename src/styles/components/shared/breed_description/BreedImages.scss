@@ -1,0 +1,40 @@
+@import "../../../global/system.scss";
+
+.breed-images {
+  h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+
+  .images-collection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 177px;
+  
+    .cat-card {
+      box-sizing: border-box;
+      padding: 0 26px 55px 0;
+      margin-left: 0;
+      min-width: 20%;
+
+      @media (max-width: $breakpt-large) {
+        min-width: 30%;
+        padding: 0 0 20px;
+      }
+
+      @media (max-width: $breakpt-medium) {
+        min-width: 40%;
+      }
+
+      @media (max-width: $breakpt-small) {
+        min-width: 100%;
+      }
+  
+      &:first-child:before {
+        content: none;
+      }
+    }
+  }
+}

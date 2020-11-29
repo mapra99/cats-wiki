@@ -1,0 +1,34 @@
+@import '../../../global/system';
+
+.heading {
+  .heading-tab {
+    margin-bottom: 36px;
+  
+    hr {
+      width: 60px;
+    }
+  }
+  
+  .heading-title {
+    @include flex-horizontal;
+    align-items: flex-end;
+    margin-bottom: 46px;
+
+    @media (max-width: $breakpt-medium) {
+      flex-direction: column;
+    }
+  
+    h1 {
+      max-width: 540px;
+
+      @media (max-width: $breakpt-medium) {
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .link {
+      margin-bottom: 12px;
+    }
+  }
+}

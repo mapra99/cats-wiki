@@ -1,0 +1,17 @@
+@import "../../../global/system.scss";
+
+.further-details {
+  margin-top: 38px;
+
+  .breed-attribute {
+    margin-bottom: 32px;
+
+    .name {
+      font-weight: 700;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../global/system';
+
+.main {
+  margin: 0 18px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $breakpt-small) {
+    margin: 0 96px;
+  }
+}
+
+.logo-wrap {
+  margin: 26px 0 30px;
+  width: 128px;
+
+  @media (max-width: $breakpt-small) {
+    margin: 23px 0;
+  }
+}
+
+.section {
+  box-sizing: border-box;
+  padding: 100px 108px;
+
+  @media (max-width: $breakpt-medium) {
+    padding: 20px 30px;
+  }
+}
+
+.cta-link {
+  color: rgba($very-dark-brown, 0.6);
+  font-weight: 700;
+}
+
+.headline-decorator {
+  background-color: $dark-brown;
+  border: 0;
+  height: 3px;
+  margin-left: 0;
+  margin-top: 8px;
+}

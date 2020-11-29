@@ -1,0 +1,21 @@
+@import '../../../global/system';
+
+.search-popup.search-results {
+  padding: 7px 11px;
+  max-height: 220px;
+  overflow-y: auto;
+
+  .breed-result {
+    border-radius: 12px;
+    padding: 21px 10px 21px;
+
+    @media (max-width: $breakpt-medium) {
+      font-size: 16px;
+      padding: 20px 10px;
+    }
+
+    &:hover {
+      background-color: rgba($light-brown, .1);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../../global/system.scss";
+
+.breed-description {
+  display: flex;
+  align-items: center;
+  padding: 22px 0;
+
+  @media (max-width: $breakpt-medium) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cat-card {
+    @media (max-width: $breakpt-medium) {
+      margin: 0 0 10px;
+    }
+
+    img {
+      margin-bottom: 0;
+    }
+  }
+
+  .text-wrap {
+    flex: 6 6;
+
+    @media (max-width: $breakpt-extra-large) {
+      flex: 4 4;
+    }
+
+    @media (max-width: $breakpt-large) {
+      flex: 2 2;
+    }
+  }
+}
