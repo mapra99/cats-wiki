@@ -4,6 +4,10 @@
   display: flex;
   max-width: 700px;
 
+  @media (max-width: $breakpt-large) {
+    flex-direction: column;
+  }
+
   .name {
     display: inline-block;
     width: 180px;
@@ -13,6 +17,11 @@
   .value {
     display: flex;
     width: calc(100% - 210px);
+
+    @media (max-width: $breakpt-large) {
+      width: 100%;
+      margin-top: 10px;
+    }
 
     .score {
       display: inline-block;
