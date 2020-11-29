@@ -28,12 +28,21 @@
 
   .authorship {
     @include common-text;
-
+    text-align: right;
+    max-width: 400px;
     color: $white;
     font-weight: normal;
 
     @media (max-width: $breakpt-small) {
       font-size: 14px;
+    }
+
+    a {
+      color: $danger-red;
+    }
+
+    strong {
+      font-weight: 600;
     }
   }
 }
