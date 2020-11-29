@@ -2,6 +2,8 @@
 
 > Get, search for information about cat breeds. If you love cats, you got to the right place :)
 
+![screenshot](./docs/mockup.png)
+
 In the cats wiki you can learn many things about all kinds of cats. You can search for cat breeds, see some daily top breeds and get amazed with lots of cute photos.
 
 This is the frontend component of the cats wiki project. You can find the main [backend here](https://github.com/mapra99/cats-wiki-api)
@@ -69,7 +71,7 @@ And you will find the production builds at the dist/ folder
 
 ## Author
 
-👤 **Miguel Prada**
+**Miguel Prada**
 
 - Github: [@mapra99](https://github.com/mapra99)
 - Twitter: [@MiguelPrada1](https://twitter.com/MiguelPrada1)
