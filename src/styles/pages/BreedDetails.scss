@@ -6,7 +6,15 @@
 
     .cat-card {
       flex: 1.5 1.5;
-      margin: 0 50px;
+      margin: 0 30px;
+
+      @media (max-width: $breakpt-extra-large) {
+        margin: 0 20px;
+      }
+
+      @media (max-width: $breakpt-medium) {
+        margin: 0 0 20px 10px;
+      }
 
       &:hover {
         flex: 3 3;
@@ -14,7 +22,15 @@
     }
 
     .text-wrap {
-      margin: 0 50px;
+      margin: 0 30px;
+
+      @media (max-width: $breakpt-extra-large) {
+        margin: 0 20px;
+      }
+
+      @media (max-width: $breakpt-medium) {
+        margin: 0 0 10px;
+      }
     }
   }
 
