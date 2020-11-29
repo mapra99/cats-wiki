@@ -10,7 +10,10 @@ const PageFooter = () => (
       <Logo />
     </Link>
     <div className='authorship'>
-      &copy; Miguel Prada - devchallenge.io 2020
+      <strong>CatWiki - 2020</strong>
+      <br />
+      This project is open sourced. If you like it, follow it and 
+      <a href="https://github.com/mapra99/cats-wiki"> contribute here!</a>
     </div>
   </div>
 );
