@@ -19,6 +19,13 @@
     &::placeholder {
       color: $very-dark-brown;
     }
+
+    @media (max-width: $breakpt-medium) {
+      height: 46px;
+      line-height: 46px;
+      padding: 0 20px;
+      font-size: 16px;
+    }
   }
 
   .search-button {
@@ -32,6 +39,11 @@
     top: 0;
     transition: background-color .25s;
     width: 70px;
+
+    @media (max-width: $breakpt-medium) {
+      height: 46px;
+      width: 46px;
+    }
 
     &:hover {
       background-color: rgba($black, 0.1);

@@ -9,6 +9,11 @@
     border-radius: 12px;
     padding: 21px 10px 21px;
 
+    @media (max-width: $breakpt-medium) {
+      font-size: 16px;
+      padding: 20px 10px;
+    }
+
     &:hover {
       background-color: rgba($light-brown, .1);
     }

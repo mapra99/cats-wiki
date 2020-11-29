@@ -3,4 +3,9 @@
 .error-message {
   padding: 30px;
   color: $danger-red;
+
+  @media (max-width: $breakpt-medium) {
+    padding: 20px;
+    font-size: 16px;
+  }
 }
