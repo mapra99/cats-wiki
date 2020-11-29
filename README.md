@@ -46,7 +46,7 @@ API_URL=http://localhost:3000
 ```
 So far this is the only required environment variable. See the file `.env.example` for further variables that trigger optional services if any. Also, check the next section to set up a local API to get started.
 
-#### Setting up a local backend
+#### Setting up a local API
 The application needs a local API to attend the requests from the React application.
 
 You can either set up a local copy of the real backend or run a fake json api. For the former you can follow the [setup instructions here](https://github.com/mapra99/cats-wiki-api/blob/development/README.md), for the latter follow this:
@@ -55,6 +55,8 @@ You can either set up a local copy of the real backend or run a fake json api. F
 ```
 npx json-server db.json --routes routes.json
 ```
+
+Take a look at the [API docs here](https://documenter.getpostman.com/view/10455715/TVmJhyoV).
 
 ### Usage
 
