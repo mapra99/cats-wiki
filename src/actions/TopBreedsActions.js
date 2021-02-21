@@ -1,5 +1,5 @@
-import _ from 'underscore';
 import { FETCH_TOP_BREEDS, LOADING_TOP_BREEDS, ERROR_TOP_BREEDS, FEED_BREED_DATA } from '../types/BreedsTypes';
+import { pluck, buildObjectFromArrays } from '../utils/arrayUtils';
 
 const {API_URL} = process.env;
 const TopBreedsActions = {
@@ -13,11 +13,11 @@ const TopBreedsActions = {
         return response.json();
       })
       .then(data => {
-        const breed_ids = _.pluck(data, "id");
+        const breed_ids = pluck(data, "id");
 
         dispatch({
           type: FEED_BREED_DATA,
-          payload: _.object(breed_ids, data)
+          payload: buildObjectFromArrays(breed_ids, data)
         })
 
         dispatch({
