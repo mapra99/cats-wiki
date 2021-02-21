@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import _ from 'underscore';
 
 import BreedSearchActions from '../../../actions/BreedSearchActions';
 
 import BreedImages from './BreedImages';
 import SpinnerIcon from '../../../assets/icons/SpinnerIcon';
+
+import {sample} from '../../../utils/arrayUtils';
 
 class BreedImagesContainer extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class BreedImagesContainer extends React.Component {
 
     if (loading) return <SpinnerIcon className="loading-icon"/>;
 
-    return <BreedImages images={_.sample(targetBreed.images, 8)}/>
+    return <BreedImages images={sample(targetBreed.images, 8)}/>
   }
 }
 

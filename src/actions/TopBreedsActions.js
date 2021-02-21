@@ -1,6 +1,6 @@
 import axios from 'axios';
-import _ from 'underscore';
 import { FETCH_TOP_BREEDS, LOADING_TOP_BREEDS, ERROR_TOP_BREEDS, FEED_BREED_DATA } from '../types/BreedsTypes';
+import { pluck, buildObjectFromArrays } from '../utils/arrayUtils';
 
 const {API_URL} = process.env;
 const TopBreedsActions = {
@@ -9,11 +9,11 @@ const TopBreedsActions = {
 
     axios.get(`${API_URL}/breeds/top-searches?limit=${limit}`)
       .then(response => {
-        const breed_ids = _.pluck(response.data, "id");
+        const breed_ids = pluck(response.data, "id");
 
         dispatch({
           type: FEED_BREED_DATA,
-          payload: _.object(breed_ids, response.data)
+          payload: buildObjectFromArrays(breed_ids, response.data)
         })
 
         dispatch({
