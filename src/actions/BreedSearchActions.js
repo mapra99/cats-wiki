@@ -1,4 +1,3 @@
-import axios from 'axios';
 import _ from 'underscore';
 import {SEARCH_BREED, LOADING_BREED_SEARCH, ERROR_BREED_SEARCH, FEED_BREED_DATA, RESET_BREED_SEARCH} from '../types/BreedsTypes';
 
@@ -14,13 +13,18 @@ const BreedSearchActions = {
 
     dispatch({ type: LOADING_BREED_SEARCH })
 
-    return axios.get(`${API_URL}/breeds/search?term=${term}&by=${criteria}&images_limit=${imagesLimit}`)
+    return fetch(`${API_URL}/breeds/search?term=${term}&by=${criteria}&images_limit=${imagesLimit}`)
       .then(response => {
-        const breed_ids = _.pluck(response.data, "id");
+        if (!response.ok) throw Error(response.statusText);
+
+        return response.json();
+      })
+      .then(data => {
+        const breed_ids = _.pluck(data, "id");
 
         dispatch({
           type: FEED_BREED_DATA,
-          payload: _.object(breed_ids, response.data)
+          payload: _.object(breed_ids, data)
         })
 
         dispatch({
