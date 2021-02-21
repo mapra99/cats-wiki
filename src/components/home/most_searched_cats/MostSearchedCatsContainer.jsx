@@ -1,14 +1,13 @@
 import React from 'react';
-import _ from 'underscore';
 
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import TopBreedsActions from '../../../actions/TopBreedsActions';
 
 import Heading from './Heading'
 import BreedCards from './BreedCards';
 
 import '../../../styles/components/home/most_searched_cats/MostSearchedCatsContainer.scss';
+import {sample} from '../../../utils/arrayUtils';
 
 class MostSearchedCats extends React.Component{
   componentDidMount() {
@@ -20,7 +19,7 @@ class MostSearchedCats extends React.Component{
 
   render() {
     const {finished, topResults, breeds} = this.props;
-    const breedsSample = _.sample(topResults, 4);
+    const breedsSample = sample(topResults, 4);
 
     return (
       <div className='section top-searches'>
