@@ -14,7 +14,7 @@ const BreedSearchActions = {
 
     dispatch({ type: LOADING_BREED_SEARCH })
 
-    return axios.get(`${API_URL}/breeds/search?term=${term}&by=${criteria}&include_images=${imagesLimit}`)
+    return axios.get(`${API_URL}/breeds/search?term=${term}&by=${criteria}&images_limit=${imagesLimit}`)
       .then(response => {
         const breed_ids = _.pluck(response.data, "id");
 
