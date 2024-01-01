@@ -17,7 +17,7 @@ Also consuming the public [Cat API](https://thecatapi.com/)
 
 ## Live Demo
 
-[Live Demo Link](https://cats-wiki.vercel.app/)
+[Live Demo Link](https://demo.cats-wiki.lat/)
 
 
 ## Getting Started
@@ -49,7 +49,7 @@ So far this is the only required environment variable. See the file `.env.exampl
 #### Setting up a local API
 The application needs a local API to attend the requests from the React application.
 
-You can either set up a local copy of the real backend or run a fake json api. For the former you can follow the [setup instructions here](https://github.com/mapra99/cats-wiki-api/blob/development/README.md), for the latter follow this:
+You can either set up a local copy of the real backend or run a fake json api. For the former you can follow the [setup instructions here](https://github.com/mapra99/cats-wiki-api/blob/master/README.md), for the latter follow this:
 
 1. On the project's folder, run the following:
 ```
